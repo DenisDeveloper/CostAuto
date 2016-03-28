@@ -15,10 +15,10 @@ System.config({
 
   map: {
     "babel": "npm:babel-core@5.8.38",
-    "gisapi": "http://maps.api.2gis.ru/2.0/loader.js",
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "core-js": "npm:core-js@1.2.6",
     "d3": "npm:d3@3.5.16",
+    "gisapi": "http://maps.api.2gis.ru/2.0/loader.js",
     "jquery": "npm:jquery@2.2.2",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"

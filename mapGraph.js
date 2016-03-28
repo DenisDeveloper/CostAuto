@@ -1,8 +1,7 @@
 import d3 from 'd3';
-import $ from 'jquery';
 import 'gisapi';
 
-let bezier = (t, p0, p1, p2, p3)=>{
+const bezier = (t, p0, p1, p2, p3)=>{
       var cX = 3 * (p1.x - p0.x),
         bX = 3 * (p2.x - p1.x) - cX,
         aX = p3.x - p0.x - cX - bX;
@@ -20,7 +19,7 @@ let bezier = (t, p0, p1, p2, p3)=>{
       };
     }
 
-let calcPoints = (p0, p1, p2, p3)=>{
+const calcPoints = (p0, p1, p2, p3)=>{
       var res = [];
       for (var i = 0; i < 1; i += 0.1) {
         var p = bezier(i, p0, p1, p2, p3);
@@ -38,7 +37,7 @@ export default class MapGraph {
     this.json = jsonFileName;
   }
 
-  show(){
+  render(){
     DG.then(() => {
       console.log('gis init');
       let map = DG.map('map', {
